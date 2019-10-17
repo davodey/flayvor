@@ -1,42 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pearson Web Component</title>
+    <title>Flayvor Material Web Component</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/style.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/@pearson-ux/gravity-css" />
-
-    <script type="text/javascript">
-      if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-        document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js"><\/script>');
-        document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/custom-elements-es5-adapter.js"><\/script>');
-      } else {
-        document.write('<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-loader.js"><\/script>');
-        document.write('<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/custom-elements-es5-adapter.js"><\/script>');
-      }
-    </script>
-
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-loader.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/custom-elements-es5-adapter.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-    <script src="js/dist/pearson-accordion.js"></script>
+    <script src="js/dist/index.js"></script>
   </head>
 
   <body>
-  <div style="margin:100px; width:320px;">
-    <pearson-accordion>
-      <ul slot="buttons">
-        <li>Button One</li>
-        <li>Button Two</li>
-        <li>Button Three</li>
-        <li>Button Four</li>
-      </ul>
-      <div class="panels" slot="panels">
-        <div class="panel">Section One</div>
-        <div class="panel">Section Two</div>
-        <div class="panel">Section Three</div>
-        <div class="panel">Section Four</div>
-      </div>
-    </pearson-accordion>
-  </div>
+    <main id="main">
+      <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+            <span class="mdc-top-app-bar__title">Title</span>
+          </section>
+        </div>
+      </header>
+    </main>
   </body>
 </html>

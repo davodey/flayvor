@@ -1,8 +1,8 @@
 {
   "name": "@flayvor/app-bar-top",
   "author": "David O'Dey | davodey@gmail.com",
-  "email" : "davodey@gmail.com",
-  "url" : "http://www.davidodey.com",
+  "email": "davodey@gmail.com",
+  "url": "http://www.davidodey.com",
   "license": "ISC",
   "version": "0.0.1",
   "description": "Material designs app bar top built as a web component",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/davodey/flavyor/components/material/app-bar-top/README.md",
   "devDependencies": {
+    "@material/top-app-bar": "^3.2.0",
     "autoprefixer": "^9.6.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
@@ -46,5 +47,6 @@
     "ios 6",
     "android > 3",
     "Firefox > 47"
-  ]
+  ],
+  "dependencies": {}
 }
