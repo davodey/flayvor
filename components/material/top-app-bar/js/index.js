@@ -2209,9 +2209,6 @@
   // and pasted between the style tags below
 
   // Other markup should be written after the closing tag.
-  menuButtonTemplate.innerHTML = `
-   <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
-  `;
 
   template.innerHTML = ` 
 <style>
@@ -2221,7 +2218,7 @@
 <header class="mdc-top-app-bar">
   <div class="mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start menu-button">
-     
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
       <span class="mdc-top-app-bar__title">Title</span>
     </section>
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
@@ -2284,14 +2281,6 @@
     }
 
     connectedCallback() {
-      const menuButtonClone = menuButtonTemplate.content.cloneNode(true),
-        menuButtonTarget = this.topAppBarElement.querySelector('.menu-button');
-
-      if (this.showMenu) {
-        menuButtonTarget.insertBefore(menuButtonClone, menuButtonTarget.childNodes[0]);
-      } else {
-        return false
-      }
 
       this.appTitle.innerHTML = this.title;
       /** Any changes to what the component renders should be done here. */
