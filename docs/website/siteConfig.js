@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
   title: 'Flayvor', // Title for your website.
   tagline: 'A simple to use material and bootstrap web component library. Choose your flayvor',
-  url: 'https://flayvor.io', // Your website URL
+  url: 'https://davodey.github.io/flayvor/', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
