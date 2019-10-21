@@ -2,21 +2,21 @@
 <rss version="2.0">
     <channel>
         <title>Flayvor Blog</title>
-        <link>https://davodey.github.io/flayvor//blog</link>
+        <link>https://flayvor.io/blog</link>
         <description>The best place to stay up-to-date with the latest Flayvor news and events.</description>
         <lastBuildDate>Mon, 21 Oct 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
             <title>Flayvor Blog</title>
-            <url>https://davodey.github.io/flayvor//img/symbol-logo-white.png</url>
-            <link>https://davodey.github.io/flayvor//blog</link>
+            <url>https://flayvor.io/img/symbol-logo-white.png</url>
+            <link>https://flayvor.io/blog</link>
         </image>
         <copyright>Copyright © 2019 Flayvor Web Components</copyright>
         <item>
             <title><![CDATA[Blog Coming Soon]]></title>
-            <link>https://davodey.github.io/flayvor//blog/2019/10/21/blog-post.html</link>
-            <guid>https://davodey.github.io/flayvor//blog/2019/10/21/blog-post.html</guid>
+            <link>https://flayvor.io/blog/2019/10/21/blog-post.html</link>
+            <guid>https://flayvor.io/blog/2019/10/21/blog-post.html</guid>
             <pubDate>Mon, 21 Oct 2019 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Coming Soon</p> ]]></description>
         </item>

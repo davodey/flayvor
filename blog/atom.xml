@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://davodey.github.io/flayvor//blog</id>
+    <id>https://flayvor.io/blog</id>
     <title>Flayvor Blog</title>
     <updated>2019-10-21T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
-    <link rel="alternate" href="https://davodey.github.io/flayvor//blog"/>
+    <link rel="alternate" href="https://flayvor.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Flayvor news and events.</subtitle>
-    <logo>https://davodey.github.io/flayvor//img/symbol-logo-white.png</logo>
+    <logo>https://flayvor.io/img/symbol-logo-white.png</logo>
     <rights>Copyright © 2019 Flayvor Web Components</rights>
     <entry>
         <title type="html"><![CDATA[Blog Coming Soon]]></title>
-        <id>https://davodey.github.io/flayvor//blog/2019/10/21/blog-post.html</id>
-        <link href="https://davodey.github.io/flayvor//blog/2019/10/21/blog-post.html">
+        <id>https://flayvor.io/blog/2019/10/21/blog-post.html</id>
+        <link href="https://flayvor.io/blog/2019/10/21/blog-post.html">
         </link>
         <updated>2019-10-21T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>Coming Soon</p> ]]></summary>
