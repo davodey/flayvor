@@ -6,17 +6,11 @@
   const template = doc.createElement('template'),
     menuButtonTemplate = doc.createElement('template');
 
-  //Styles must be copied from the css file
-  // and pasted between the style tags below
-
-  // Other markup should be written after the closing tag.
   menuButtonTemplate.innerHTML = `
    <button id="menuButton" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
   `;
 
   template.innerHTML = ` 
-
-
 <link href="../css/style.css" rel="stylesheet" />
 <header class="mdc-top-app-bar">
   <div class="mdc-top-app-bar__row">
@@ -32,10 +26,6 @@
 `;
 
   if (w.ShadyCSS) w.ShadyCSS.prepareTemplate(template, 'flayvor-top-app-bar');
-
-  /** Any helper functions that do not need to be part of the class
-   * can be declared here, before the class is defined.
-   */
 
   class AppBarTop extends HTMLElement {
     static get observedAttributes() {
@@ -115,6 +105,9 @@
       this.appTitle.innerHTML = this.title;
       this.menuIconNode.innerHTML = this.menuIcon;
       /** Any changes to what the component renders should be done here. */
+      if (this.isDense || this.isProminent || this.isStandard) {
+        this.mdcInit();
+      }
 
       if (!this.hideMenu) {
         console.log('topappbar', this.topAppBar)
@@ -130,9 +123,7 @@
         button.classList.add('hidden');
       }
 
-      if (this.isDense || this.isProminent || this.isStandard) {
-        this.mdcInit();
-      }
+
 
       // Get the attributes set by the consumer
       /** Event listeners should also be bound here. */
@@ -142,14 +133,13 @@
       if (name === 'dense' && oldValue === null) {
         this.clearStyles();
         this.topAppBarElement.classList.add('mdc-top-app-bar--dense')
-        this.mdcInit()
+
       }
 
 
       if (name === 'prominent' && oldValue === null) {
         this.clearStyles();
         this.topAppBarElement.classList.add('mdc-top-app-bar--prominent');
-        this.mdcInit()
       }
 
 
@@ -185,4 +175,3 @@
   }
   customElements.define('flayvor-top-app-bar', AppBarTop);
 })(window, document);
-

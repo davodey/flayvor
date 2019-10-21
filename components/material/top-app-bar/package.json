@@ -3,9 +3,10 @@
   "author": "David O'Dey | davodey@gmail.com",
   "email": "davodey@gmail.com",
   "url": "http://www.davidodey.com",
+  "twitter": "@davodey",
   "license": "ISC",
   "version": "0.0.1",
-  "description": "Material designs app bar top built as a web component",
+  "description": "Material design app bar top - built as a web component",
   "main": "./js/dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +19,8 @@
     "Material UI",
     "Material Design",
     "Flayvor",
-    "web components"
+    "web components",
+    "top-app-bar"
   ],
   "bugs": {
     "url": "hhttps://github.com/davodey/flayvor/issues"
