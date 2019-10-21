@@ -32,7 +32,7 @@ class Footer extends React.Component {
                 src={this.props.config.baseUrl + this.props.config.footerIcon}
                 alt={this.props.config.title}
                 width="66"
-                height="58"
+                height="36"
               />
             )}
           </a>
@@ -42,27 +42,28 @@ class Footer extends React.Component {
               Getting Started
             </a>
             <a href={this.docUrl('gravity-css/colors.html', this.props.language)}>
-              Gravity CSS
+              Material Components
             </a>
             <a href={this.docUrl('web-components/accordion.html', this.props.language)}>
-              Web Components
+              Bootstrap Components
             </a>
           </div>
           <div>
             <h5>Community</h5>
-            <a href={'mailto:GPDgravitydev@grp.pearson.com'}>
+            <a href={'mailto:davodey@gmail.com'}>
              Support Email
             </a>
           </div>
           <div>
             <h5>More</h5>
-            <a href={'https://ux.pearson.com/gravity/'}>Gravity Design System</a>
-            <a href="https://github.com/pearson-ux/web-components">GitHub</a>
+            <a href={'https://getbootstrap.com/docs/4.3/components/alerts/'}>Material Design</a>
+            <a href={'https://ux.pearson.com/gravity/'}>Bootstrap</a>
+            <a href="https://github.com/davodey/flayvor">GitHub</a>
             <a
               className="github-button"
-              href={'https://github.com/pearson-ux/web-components'}
+              href={'https://github.com/davodey/flayvor'}
               data-icon="octicon-star"
-              data-count-href="/pearson-ux/web-components"
+              data-count-href="/davodey/flayvor"
               data-show-count="true"
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">

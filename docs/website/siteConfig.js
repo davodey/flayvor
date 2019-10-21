@@ -22,13 +22,13 @@ const users = [
 
 const siteConfig = {
   title: 'Flayvor', // Title for your website.
-  tagline: 'A simple to use material and bootstrap web component library. Choose your flayvor',
+  tagline: 'A simple to use material and bootstrap web component library.',
   url: 'https://davodey.github.io/flayvor/', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
-
+  logoUrl: 'img/symbol-logo-color.png',
   // Used for publishing and more
   projectName: 'flayvor',
   organizationName: 'davodey',
@@ -39,20 +39,22 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'doc1', label: 'Docs'},
-    {blog: true, label: 'Blog'}
+    {blog: true, label: 'Blog'},
+    { href: "https://github.com/davodey/flayvor", label: "GitHub" },
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  footerIcon: 'img/favicon.ico',
-  favicon: 'img/favicon.ico',
+  headerIcon: 'img/symbol-logo-white.png',
+  footerIcon: 'img/symbol-logo-color.png',
+  favicon: 'img/symbol-logo-color.png',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#6200EE',
-    secondaryColor: '#405f27',
+    primaryColor: '#8c52ff',
+    secondaryColor: '#38b6ff',
   },
 
   /* Custom fonts for website */
@@ -70,7 +72,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Flayvor Web Components`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

@@ -166,3 +166,45 @@ table tr th {
         padding:0 100px;
     }
 }
+.homeSplashFade {
+    color:white;
+    background-color: #252525;
+}
+
+.homeSplashFade h2{
+    color:white;
+}
+
+.wrapper.homeWrapper {
+    display:flex;
+}
+.inner-logo {
+    margin-top:-50px;
+}
+
+.button {
+    border-color: #38b6ff;
+    color: #38b6ff;
+}
+
+.button:hover {
+    background-color: #38b6ff;
+}
+.container.paddingBottom.paddingTop {
+    padding-top:10px;
+}
+
+.gridBlock .blockElement:first-child img {
+   width:150px;
+    color:red;
+}
+
+.gridBlock .blockElement:nth-child(2) img {
+    width:85px;
+    color:red;
+}
+
+.gridBlock .blockElement:last-child img {
+    width:85px;
+    color:red;
+}

@@ -30,7 +30,7 @@ class HomeSplash extends React.Component {
 
     const Logo = props => (
       <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
+        <img src="../../static/img/symbol-logo-white.png" />
       </div>
     );
 
@@ -62,8 +62,11 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <a className="gr-btn extra-large" href="https://ux.pearson.com/prototypes/gravity-documentation/docs/getting-started/install">View Documentation</a>
+            <a className="button" href="https://ux.pearson.com/prototypes/gravity-documentation/docs/getting-started/install">View Documentation</a>
           </PromoSection>
+        </div>
+        <div className="inner inner-logo">
+          <img src={siteConfig.logoUrl} />
         </div>
       </SplashContainer>
     );
@@ -143,31 +146,25 @@ class Index extends React.Component {
 
     const Features = () => (
       <div>
-        <Block layout="twoColumn">
+        <Block layout="threeColumn">
           {[
             {
-              content: 'We know that the web changes. Libraries change, habits change, coding styles change. By using standards-based development, we will support more developers on more projects use things that have a longer lifetime than a library-driven solution. Oh, and BTW, they all work in IE 11 too, so we’ve got you covered. ',
-              image: `${baseUrl}img/wc-logo.png`,
+              content: 'Lets face it, most components are complex.  We wanted to build a library that’s easy to consume, accessible, with no build process required.  All our Material and Bootstrap components can be used in any modern framework or, on any simple HTML page, with little to no configuration.',
+              image: `${baseUrl}img/code-24px.svg`,
               imageAlign: 'top',
-              title: 'Built with standards',
+              title: 'Designed with simplicity',
             },
             {
-              content: 'We want to leave the decisions about how to build your web application up to you, the developer. Want to use Vue.js and Gridsome? React.js and Gatsby? Vanilla JS inside a JSP architecture? They all work. Make the right decision for your situation, and we’ll support you.  ',
-              image: `${baseUrl}img/framework.png`,
+              content: 'Material design is one of the hottest design languages.  That is why we went off the material design specification for all our material components.  All components are easy to use and customizable, so you can find they flayvor you need for your site.',
+              image: `${baseUrl}img/material_logo.svg`,
               imageAlign: 'top',
-              title: 'Framework agnostic',
+              title: 'Material Components',
             },
             {
-              content: 'No, not the Sandra Bullock/George Clooney movie… This system is based on the research and design that has informed the Pearson Gravity design system. The things you see here are either directly based on approved Gravity designs, or in the pipeline to be included in the system shortly. Use it with confidence that you are getting what design would want you to get.  ',
-              image: `${baseUrl}img/gravity.png`,
+              content: 'No more copying 300 lines of code from the bootstrap doc page to paste on your page, just add the markup of the component you want. ``` <flayvor-alert> </flavor-alert> ``` Generates all the bootstrap markup, styling, and functionality, and its all self contained in the tag.',
+              image: `${baseUrl}img/bootstrap.svg`,
               imageAlign: 'top',
-              title: 'Gravity based',
-            },
-            {
-              content: 'We wanted to build something that had accessibility in it from day one. No last-minute additions, no bugs that had to be fixed and got backlogged for 3 releases. Just accessibility. From day one.  ',
-              image: `${baseUrl}img/accessible.png`,
-              imageAlign: 'top',
-              title: 'Born a11y',
+              title: 'Bootstrap Components',
             }
           ]}
         </Block>
