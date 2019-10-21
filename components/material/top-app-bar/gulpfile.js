@@ -11,7 +11,7 @@ const autoprefixer = require('autoprefixer'),
 // build steps
 const paths = {
   html: './*.html',
-  scripts: ['./js/**/*.js', '!**/dist/*.js'],
+  scripts: ['./node_modules/@material/top-app-bar/dist/mdc.topAppBar.js', './js/index.js'],
   styles: './scss/**/*.scss',
   dist: './js/dist',
   ignore: './js/dist',
@@ -37,6 +37,7 @@ function scripts(done) {
       presets: [['env', { modules: false }]]
     })
   )
+  .pipe(concat('index.js'))
   .pipe(gulp.dest(paths.dist));
   done();
 }
