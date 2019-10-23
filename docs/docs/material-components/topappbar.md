@@ -23,15 +23,6 @@ npm i @flayvor/top-app-bar --save
 ## Demo
 
 ### Standard Header
-<style>
-      body {
-        font-family: 'Roboto', sans-serif;
-      }
-     .box flayvor-top-app-bar {
-        background-color: black;
-        color:white
-      }
-      </style>
 <div class="box">
       <flayvor-top-app-bar
               title="Flayvor Top App Bar"
@@ -42,7 +33,11 @@ npm i @flayvor/top-app-bar --save
 
 ```html
 <div style="width:100%">
-    <pearson-header theme="light" name="David ODey"> </pearson-header>
+      <flayvor-top-app-bar
+              title="Flayvor Top App Bar"
+              menuicon="menu"
+              standard
+      >
 </div>
 
 ```

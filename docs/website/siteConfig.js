@@ -87,7 +87,7 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js',
     'https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/custom-elements-es5-adapter.js'
   ],
-  stylesheets: ['https://fonts.googleapis.com/css?family=Roboto&display=swap'],
+  stylesheets: ['https://fonts.googleapis.com/css?family=Roboto&display=swap','https://fonts.googleapis.com/icon?family=Material+Icons'],
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   // No .html extensions for paths.
