@@ -38,7 +38,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
+    {doc: 'material-components/top-app-bar', label: 'Docs'},
     {blog: true, label: 'Blog'},
     { href: "https://github.com/davodey/flayvor", label: "GitHub" },
   ],
@@ -80,8 +80,14 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
-
+  scripts: [
+    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+    'https://buttons.github.io/buttons.js',
+    '/js/code-block-button.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/custom-elements-es5-adapter.js'
+  ],
+  stylesheets: ['https://fonts.googleapis.com/css?family=Roboto&display=swap'],
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   // No .html extensions for paths.

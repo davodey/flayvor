@@ -73,8 +73,8 @@ class Footer extends React.Component {
         </section>
         <section className="copyright">{this.props.config.copyright}</section>
       </footer>
-        <script src="https://unpkg.com/@pearson-ux/pearson-web-components"></script>
-        <script src="https://pearsonux.sfo2.cdn.digitaloceanspaces.com/js/tippy.js"></script>
+        <script src="https://unpkg.com/@flayvor/top-app-bar@0.0.1/js/dist/index.js"></script>
+
       </div>
     );
   }

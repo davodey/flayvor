@@ -1,7 +1,7 @@
 {
-  "docs": {
-    "Installation": ["doc1"],
-    "Material Components": [""],
-    "Bootstrap Components": [""]
+  "docs-other": {
+    "Material Components": [
+      "material-components/top-app-bar"
+      ]
   }
 }
