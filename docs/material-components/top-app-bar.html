@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Top App Bar · Flayvor</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; **This is a material component**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Top App Bar · Flayvor"/><meta property="og:type" content="website"/><meta property="og:url" content="https://flayvor.io/"/><meta property="og:description" content="&gt; **This is a material component**"/><meta property="og:image" content="https://flayvor.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://flayvor.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://flayvor.io/blog/atom.xml" title="Flayvor Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://flayvor.io/blog/feed.xml" title="Flayvor Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,500i,700&amp;display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/code-block-button.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="/js/top-app-bar.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/symbol-logo-white.png" alt="Flayvor"/><h2 class="headerTitleWithLogo">Flayvor</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/material-components/top-app-bar" target="_self">Docs</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/davodey/flayvor" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Material Components</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Material Components</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/material-components/top-app-bar">Top App Bar</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Top App Bar</h1></header><article><div><span><blockquote>
+<p><strong>This is a material component</strong>
+You can view the <a href="https://material.io/develop/web/components/top-app-bar/">view the material design top app bar developer documentation here</a>.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="installation"></a><a href="#installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<p>For detailed instructions, <a href="https://ux.pearson.com/prototypes/gravity-documentation/docs/getting-started/install">view our install section</a> in this documentation.  Make sure all the polyfills are loaded or the components will not be cross browser compatible.</p>
+<h3><a class="anchor" aria-hidden="true" id="cdn-recommended"></a><a href="#cdn-recommended" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CDN - Recommended</h3>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@flayvor/top-app-bar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="npm"></a><a href="#npm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>NPM</h3>
+<pre><code class="hljs css language-console">npm i @flayvor/top-app-bar --save
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="demo"></a><a href="#demo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Demo</h2>
+<h3><a class="anchor" aria-hidden="true" id="standard-header"></a><a href="#standard-header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Standard Header</h3>
+<h5><a class="anchor" aria-hidden="true" id="css"></a><a href="#css" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSS</h5>
+<pre><code class="hljs css language-css"><span class="hljs-selector-tag">flayvor-top-app-bar</span> {
+   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#c6e873</span>;
+   <span class="hljs-attribute">color</span>:<span class="hljs-number">#252525</span>;
+   <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Roboto'</span>, sans-serif;
+}
+</code></pre>
+<style>
+    flayvor-top-app-bar {
+        background-color: #c6e873;
+        color:#252525;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+     }
+</style>
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar standard title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
+</div>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flayvor-top-app-bar</span> <span class="hljs-attr">standard</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Flayvor Top App Bar"</span> <span class="hljs-attr">menuicon</span>=<span class="hljs-string">"menu"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flayvor-top-app-bar</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="dense-header"></a><a href="#dense-header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dense Header</h3>
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar dense title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
+</div>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flayvor-top-app-bar</span> <span class="hljs-attr">dense</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Flayvor Top App Bar"</span> <span class="hljs-attr">menuicon</span>=<span class="hljs-string">"menu"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flayvor-top-app-bar</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="prominent-header"></a><a href="#prominent-header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prominent Header</h3>
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar prominent title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
+</div>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flayvor-top-app-bar</span> <span class="hljs-attr">prominent</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Flayvor Top App Bar"</span> <span class="hljs-attr">menuicon</span>=<span class="hljs-string">"menu"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flayvor-top-app-bar</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="always-collapsed-header"></a><a href="#always-collapsed-header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Always Collapsed Header</h3>
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar collapsed title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
+</div>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flayvor-top-app-bar</span> <span class="hljs-attr">collapsed</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Flayvor Top App Bar"</span> <span class="hljs-attr">menuicon</span>=<span class="hljs-string">"menu"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flayvor-top-app-bar</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="short-header"></a><a href="#short-header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Short Header</h3>
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar short title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
+</div>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flayvor-top-app-bar</span> <span class="hljs-attr">short</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Flayvor Top App Bar"</span> <span class="hljs-attr">menuicon</span>=<span class="hljs-string">"menu"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flayvor-top-app-bar</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="hide-menu"></a><a href="#hide-menu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hide Menu</h3>
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar hidemenu title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
+</div>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flayvor-top-app-bar</span> <span class="hljs-attr">hidemenu</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Flayvor Top App Bar"</span> <span class="hljs-attr">menuicon</span>=<span class="hljs-string">"menu"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flayvor-top-app-bar</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="alternate-icon"></a><a href="#alternate-icon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Alternate Icon</h3>
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar title="Flayvor Top App Bar" menuicon="close" position="static"></flayvor-top-app-bar>
+</div>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flayvor-top-app-bar</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Flayvor Top App Bar"</span> <span class="hljs-attr">menuicon</span>=<span class="hljs-string">"close"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flayvor-top-app-bar</span>&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="structure"></a><a href="#structure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Structure</h2>
+<p>To add a header, add the markup up at the top of the document above the <code>&lt;main id=&quot;main&quot;&gt;</code> element.</p>
+<blockquote>
+<p><strong>Important note</strong>
+The header component is not connected to any pearson authentication services.</p>
+</blockquote>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"full-width"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">pearson-header</span> <span class="hljs-attr">theme</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"David ODey"</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">pearson-header</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"main"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- place your app markup here --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="authentication"></a><a href="#authentication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authentication</h2>
+<p>You will need to build a script for users to authenticate through console.  This does not come with the header and is completely seperate.
+The header is flexible and allows you to pass in attributes to toggle the different states.  Here is the recommended user flow to achieve these results.</p>
+<ol>
+<li>A user clicks sign in and they are redirected to console.</li>
+<li>The user logs in through console and gets redirected back to your application.</li>
+<li>After redirect add the following attributes to the header that are provided through authentication.
+<ol>
+<li><code>name=&quot;full name&quot;</code></li>
+<li><code>notifications=&quot;number&quot;</code></li>
+<li><code>loggedIn</code></li>
+</ol></li>
+<li>When a user clicks log out, the state of the header changes and an event fires allowing you to make any service calls you need to so you can log out of the application&quot;</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="api"></a><a href="#api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API</h2>
+<blockquote>
+<p><strong>Important note</strong>
+All attributes in this api are required AFTER a user has been authenticated.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="required"></a><a href="#required" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Required</h3>
+<table>
+<thead>
+<tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>theme</code></td><td><code>String</code></td><td>required</td><td>Choose between a 'light' and 'dark' header theme</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="optional"></a><a href="#optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optional</h3>
+<table>
+<thead>
+<tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>notifications</code></td><td><code>String</code></td><td><code>'0'</code></td><td>The number of notifications the user has, this will display in the header.</td></tr>
+<tr><td><code>name</code></td><td><code>String</code></td><td><code>unset</code></td><td>The name of the user, used to build the avatar</td></tr>
+<tr><td><code>loggedin</code></td><td><code>Bool</code></td><td><code>false</code></td><td>When true, the header changes to a logged in state.</td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<p><code>pearson-header</code> emits one event: <code>logout</code>.</p>
+<table>
+<thead>
+<tr><th>Event</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>logout</code></td><td>Will fire when the user clicks the logout button</td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-js">  <span class="hljs-keyword">const</span> headerNode = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'pearson-header'</span>);
+
+  headerNode.addEventListener(<span class="hljs-string">'logout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-comment">// Communicate to the authentication service and log the user out.</span>
+  });
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="html-markup"></a><a href="#html-markup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTML Markup</h2>
+<p>Do you want to build out a custom header?  No problem, use the markup below along with Gravity CSS to make your own header.</p>
+<h3><a class="anchor" aria-hidden="true" id="header-markup"></a><a href="#header-markup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Header Markup</h3>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"gr-header light"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"logo"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"img"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Pearson"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"actions"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"gr-btn icon-btn-18"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"avatar"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"initials"</span>&gt;</span>DO<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"notification"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"expand"</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-24"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xmlns:xlink</span>=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#drop-down-24"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse"</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-24"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xmlns:xlink</span>=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#drop-up-24"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="menu-markup"></a><a href="#menu-markup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Menu Markup</h3>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-menu"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"gr-btn header-btn"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"gr-font-large"</span>&gt;</span>Log out<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"gr-meta"</span>&gt;</span>Sign out of all Pearson products<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-24"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xmlns:xlink</span>=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#next-24"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#installation">Installation</a><ul class="toc-headings"><li><a href="#cdn-recommended">CDN - Recommended</a></li><li><a href="#npm">NPM</a></li></ul></li><li><a href="#demo">Demo</a><ul class="toc-headings"><li><a href="#standard-header">Standard Header</a></li><li><a href="#dense-header">Dense Header</a></li><li><a href="#prominent-header">Prominent Header</a></li><li><a href="#always-collapsed-header">Always Collapsed Header</a></li><li><a href="#short-header">Short Header</a></li><li><a href="#hide-menu">Hide Menu</a></li><li><a href="#alternate-icon">Alternate Icon</a></li></ul></li><li><a href="#structure">Structure</a></li><li><a href="#authentication">Authentication</a></li><li><a href="#api">API</a><ul class="toc-headings"><li><a href="#required">Required</a></li><li><a href="#optional">Optional</a></li><li><a href="#events">Events</a></li></ul></li><li><a href="#html-markup">HTML Markup</a><ul class="toc-headings"><li><a href="#header-markup">Header Markup</a></li><li><a href="#menu-markup">Menu Markup</a></li></ul></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/symbol-logo-color.png" alt="Flayvor" width="66" height="36"/></a><div><h5>Docs</h5><a href="/docs/en/getting-started/install.html">Getting Started</a><a href="/docs/en/gravity-css/colors.html">Material Components</a><a href="/docs/en/web-components/accordion.html">Bootstrap Components</a></div><div><h5>Community</h5><a href="mailto:davodey@gmail.com">Support Email</a></div><div><h5>More</h5><a href="https://getbootstrap.com/docs/4.3/components/alerts/">Material Design</a><a href="https://ux.pearson.com/gravity/">Bootstrap</a><a href="https://github.com/davodey/flayvor">GitHub</a><a class="github-button" href="https://github.com/davodey/flayvor" data-icon="octicon-star" data-count-href="/davodey/flayvor" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Flayvor Web Components</section></footer><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/></div></div></body></html>
