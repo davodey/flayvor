@@ -34,7 +34,7 @@ flayvor-top-app-bar {
 
 <style>
     flayvor-top-app-bar {
-        background-color: #c6e873;
+        background-color: #ececec;
         color:#252525;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
