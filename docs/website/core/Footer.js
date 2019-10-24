@@ -73,7 +73,7 @@ class Footer extends React.Component {
         </section>
         <section className="copyright">{this.props.config.copyright}</section>
       </footer>
-        <script src={"https://unpkg.com/@flayvor/top-app-bar"}></script>
+        <link href={"https://fonts.googleapis.com/icon?family=Material+Icons"} rel={"stylesheet"} />
       </div>
     );
   }

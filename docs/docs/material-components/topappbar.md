@@ -23,100 +23,85 @@ npm i @flayvor/top-app-bar --save
 ## Demo
 
 ### Standard Header
-<div class="box">
-      <flayvor-top-app-bar
-              title="Flayvor Top App Bar"
-              menuicon="menu"
-              standard
-      >
+##### CSS
+```css
+flayvor-top-app-bar {
+   background-color: #c6e873;
+   color:#252525;
+   font-family: 'Roboto', sans-serif;
+}
+```
+
+<style>
+    flayvor-top-app-bar {
+        background-color: #c6e873;
+        color:#252525;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+     }
+</style>
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar standard title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
 </div>
 
 ```html
-<div style="width:100%">
-      <flayvor-top-app-bar
-              title="Flayvor Top App Bar"
-              menuicon="menu"
-              standard
-      >
-</div>
-
+<flayvor-top-app-bar standard title="Flayvor Top App Bar" menuicon="menu"></flayvor-top-app-bar>
 ```
 
 
-### Dark Header
-> **Important note**
-Add a background color style to the wrapper div to acheive a background color.
-
-<div class="box">
-    <div class="gradient-bg">
-        <pearson-header
-           notifications="0"
-           theme="dark"
-           name="David ODey"
-         >
-        </pearson-header>
-    </div>
+### Dense Header
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar dense title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
 </div>
 
 ```html
-<div style="width:100%" class="your-color-class">
-    <pearson-header theme="dark" name="David ODey"> </pearson-header>
-</div>
+<flayvor-top-app-bar dense title="Flayvor Top App Bar" menuicon="menu"></flayvor-top-app-bar>
 ```
 
-### Custom Markup
-<div class="box">
-    <pearson-header
-       notifications="0"
-       theme="light"
-       name="David ODey"
-     >
-      <img src="https://via.placeholder.com/468x60?text=Your+Image">
-    </pearson-header>
+### Prominent Header
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar prominent title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
 </div>
 
 ```html
-<div style="width:100%">
-    <pearson-header name="David ODey">
-        <img src="https://via.placeholder.com/468x60?text=Your+Image">
-    </pearson-header>
-</div>
+<flayvor-top-app-bar prominent title="Flayvor Top App Bar" menuicon="menu"></flayvor-top-app-bar>
 ```
 
-### Logged In
-<div class="box">
-    <pearson-header
-       notifications="0"
-       theme="light"
-       name="David ODey"
-       loggedIn
-     >
-    </pearson-header>
+### Always Collapsed Header
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar collapsed title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
 </div>
 
 ```html
-<div style="width:100%">
-    <pearson-header loggedIn> </pearson-header>
-</div>
+<flayvor-top-app-bar collapsed title="Flayvor Top App Bar" menuicon="menu"></flayvor-top-app-bar>
 ```
 
-### Logged In w/ Notifications
-<div class="box">
-    <pearson-header
-       notifications="5"
-       theme="light"
-       name="David ODey"
-       loggedIn
-     >
-    </pearson-header>
+### Short Header
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar short title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
 </div>
 
 ```html
-<div style="width:100%">
-    <pearson-header notifications="5" loggedIn> </pearson-header>
-</div>
+<flayvor-top-app-bar short title="Flayvor Top App Bar" menuicon="menu"></flayvor-top-app-bar>
 ```
 
+### Hide Menu
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar hidemenu title="Flayvor Top App Bar" menuicon="menu" position="static"></flayvor-top-app-bar>
+</div>
+
+```html
+<flayvor-top-app-bar hidemenu title="Flayvor Top App Bar" menuicon="menu"></flayvor-top-app-bar>
+```
+
+### Alternate Icon
+<div class="box" style="padding:0;">
+    <flayvor-top-app-bar title="Flayvor Top App Bar" menuicon="close" position="static"></flayvor-top-app-bar>
+</div>
+
+```html
+<flayvor-top-app-bar title="Flayvor Top App Bar" menuicon="close"></flayvor-top-app-bar>
+```
 
 
 ## Structure
