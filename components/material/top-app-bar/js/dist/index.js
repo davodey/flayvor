@@ -2374,32 +2374,30 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
             }
           }
         });
-        this.shadowRoot.addEventListener('slotchange', function (event) {
-          console.log(event);
-        });
+
         if (this.type === null) {
           this.type = 'standard';
         }
 
-        if (this.type === 'standard' && oldValue === null) {
+        if (this.type === 'standard') {
           this.clearStyles();
           this.topAppBarElement.classList.add('mdc-top-app-bar--standard');
           this.mdcInit();
         }
 
-        if (this.type === 'dense' && oldValue === null) {
+        if (this.type === 'dense') {
           this.clearStyles();
           this.topAppBarElement.classList.add('mdc-top-app-bar--dense');
           this.mdcInit();
         }
 
-        if (this.type === 'prominent' && oldValue === null) {
+        if (this.type === 'prominent') {
           this.clearStyles();
           this.topAppBarElement.classList.add('mdc-top-app-bar--prominent');
           this.mdcInit();
         }
 
-        if (this.type === 'fixed' && oldValue === null) {
+        if (this.type === 'fixed') {
           this.clearStyles();
           this.topAppBarElement.classList.add('mdc-top-app-bar--fixed');
           this.mdcInit();

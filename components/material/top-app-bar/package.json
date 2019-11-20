@@ -5,7 +5,7 @@
   "url": "http://www.davidodey.com",
   "twitter": "@davodey",
   "license": "ISC",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Material design app bar top - built as a web component",
   "main": "./js/dist/index.js",
   "scripts": {
