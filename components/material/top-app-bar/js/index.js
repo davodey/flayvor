@@ -31,31 +31,15 @@
 
   class AppBarTop extends HTMLElement {
     static get observedAttributes() {
-      return ['title', 'hideMenu', 'menuicon', 'short', 'collapsed', 'fixed', 'prominent', 'dense', 'standard', 'position'];
+      return ['title', 'hideMenu', 'menuicon',  'position', 'type'];
+    }
+
+    get type () {
+      return this.getAttribute('type')
     }
 
     get position () {
       return this.getAttribute('position');
-    }
-
-    get isStandard() {
-      return this.hasAttribute('standard');
-    }
-
-    get isDense () {
-      return this.hasAttribute('dense')
-    }
-
-    get isProminent() {
-      return this.hasAttribute('prominent');
-    }
-
-    get isFixed () {
-      return this.hasAttribute('fixed')
-    }
-
-    get isShort () {
-      return this.hasAttribute('short');
     }
 
     get menuIcon () {
@@ -72,6 +56,10 @@
 
     set menuIcon(value) {
       this.setAttribute('menuicon', value)
+    }
+
+    set type(value) {
+      this.setAttribute('type', value)
     }
 
     mdcInit () {
@@ -110,13 +98,11 @@
       this.appTitle.innerHTML = this.title;
       this.menuIconNode.innerHTML = this.menuIcon;
 
-      /** Any changes to what the component renders should be done here. */
-      if (this.isDense || this.isProminent || this.isStandard) {
-        this.mdcInit();
+      if (this.type === null ) {
+        this.type = 'standard'
       }
 
       if (!this.hideMenu) {
-        console.log('topappbar', this.topAppBar)
         this.topAppBar.listen('MDCTopAppBar:nav', () => {
           this.dispatchEvent(
             new CustomEvent('MDCTopAppBar:nav', {
@@ -139,40 +125,65 @@
       /** Event listeners should also be bound here. */
     }
     attributeChangedCallback(name, oldValue, newValue) {
+      let slots = this.shadowRoot.querySelectorAll('slot');
 
-      if (name === 'dense' && oldValue === null) {
+      slots[1].addEventListener('slotchange', event => {
+        if (slots[1].name === 'right') {
+          const button = this.querySelector('button'),
+            target = this.shadowRoot.querySelector('.mdc-top-app-bar__section--align-end');
+          if (target !== null && button !== null) {
+            target.appendChild(button)
+          }
+        }
+      });
+      this.shadowRoot.addEventListener('slotchange', event => {
+        console.log(event)
+      })
+      if (this.type === null ) {
+        this.type = 'standard'
+      }
+
+      if (this.type === 'standard'  && oldValue === null) {
+          this.clearStyles();
+          this.topAppBarElement.classList.add('mdc-top-app-bar--standard')
+          this.mdcInit();
+      }
+
+      if (this.type === 'dense' && oldValue === null) {
         this.clearStyles();
         this.topAppBarElement.classList.add('mdc-top-app-bar--dense')
-
+        this.mdcInit();
       }
 
-
-      if (name === 'prominent' && oldValue === null) {
+      if (this.type === 'prominent' && oldValue === null) {
         this.clearStyles();
         this.topAppBarElement.classList.add('mdc-top-app-bar--prominent');
+        this.mdcInit();
       }
 
 
-      if (name === 'fixed' && oldValue === null) {
+      if (this.type === 'fixed' && oldValue === null) {
         this.clearStyles();
         this.topAppBarElement.classList.add('mdc-top-app-bar--fixed');
         this.mdcInit()
       }
 
 
-      if (name === 'short' && oldValue === null) {
+      if (this.type === 'short' && oldValue === null) {
         this.clearStyles();
         this.topAppBarElement.classList.add('mdc-top-app-bar--short');
         this.mdcInit()
       }
 
 
-      if (name === 'collapsed') {
+      if (this.type === 'collapsed') {
         this.clearStyles();
         this.topAppBarElement.classList.add('mdc-top-app-bar--short');
         this.topAppBarElement.classList.add('mdc-top-app-bar--short-collapsed');
         this.mdcInit()
       }
+
+
 
       if (name === 'title' && oldValue !== newValue) {
         this.appTitle.innerHTML = this.title;

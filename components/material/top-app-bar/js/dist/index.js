@@ -2265,34 +2265,17 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
         this.topAppBarElement.classList.add('mdc-top-app-bar');
       }
     }, {
+      key: 'type',
+      get: function get() {
+        return this.getAttribute('type');
+      },
+      set: function set(value) {
+        this.setAttribute('type', value);
+      }
+    }, {
       key: 'position',
       get: function get() {
         return this.getAttribute('position');
-      }
-    }, {
-      key: 'isStandard',
-      get: function get() {
-        return this.hasAttribute('standard');
-      }
-    }, {
-      key: 'isDense',
-      get: function get() {
-        return this.hasAttribute('dense');
-      }
-    }, {
-      key: 'isProminent',
-      get: function get() {
-        return this.hasAttribute('prominent');
-      }
-    }, {
-      key: 'isFixed',
-      get: function get() {
-        return this.hasAttribute('fixed');
-      }
-    }, {
-      key: 'isShort',
-      get: function get() {
-        return this.hasAttribute('short');
       }
     }, {
       key: 'menuIcon',
@@ -2315,7 +2298,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
     }], [{
       key: 'observedAttributes',
       get: function get() {
-        return ['title', 'hideMenu', 'menuicon', 'short', 'collapsed', 'fixed', 'prominent', 'dense', 'standard', 'position'];
+        return ['title', 'hideMenu', 'menuicon', 'position', 'type'];
       }
     }]);
 
@@ -2353,13 +2336,11 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
         this.appTitle.innerHTML = this.title;
         this.menuIconNode.innerHTML = this.menuIcon;
 
-        /** Any changes to what the component renders should be done here. */
-        if (this.isDense || this.isProminent || this.isStandard) {
-          this.mdcInit();
+        if (this.type === null) {
+          this.type = 'standard';
         }
 
         if (!this.hideMenu) {
-          console.log('topappbar', this.topAppBar);
           this.topAppBar.listen('MDCTopAppBar:nav', function () {
             _this2.dispatchEvent(new CustomEvent('MDCTopAppBar:nav', {
               bubbles: true
@@ -2380,30 +2361,57 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
     }, {
       key: 'attributeChangedCallback',
       value: function attributeChangedCallback(name, oldValue, newValue) {
+        var _this3 = this;
 
-        if (name === 'dense' && oldValue === null) {
+        var slots = this.shadowRoot.querySelectorAll('slot');
+
+        slots[1].addEventListener('slotchange', function (event) {
+          if (slots[1].name === 'right') {
+            var button = _this3.querySelector('button'),
+                target = _this3.shadowRoot.querySelector('.mdc-top-app-bar__section--align-end');
+            if (target !== null && button !== null) {
+              target.appendChild(button);
+            }
+          }
+        });
+        this.shadowRoot.addEventListener('slotchange', function (event) {
+          console.log(event);
+        });
+        if (this.type === null) {
+          this.type = 'standard';
+        }
+
+        if (this.type === 'standard' && oldValue === null) {
+          this.clearStyles();
+          this.topAppBarElement.classList.add('mdc-top-app-bar--standard');
+          this.mdcInit();
+        }
+
+        if (this.type === 'dense' && oldValue === null) {
           this.clearStyles();
           this.topAppBarElement.classList.add('mdc-top-app-bar--dense');
+          this.mdcInit();
         }
 
-        if (name === 'prominent' && oldValue === null) {
+        if (this.type === 'prominent' && oldValue === null) {
           this.clearStyles();
           this.topAppBarElement.classList.add('mdc-top-app-bar--prominent');
+          this.mdcInit();
         }
 
-        if (name === 'fixed' && oldValue === null) {
+        if (this.type === 'fixed' && oldValue === null) {
           this.clearStyles();
           this.topAppBarElement.classList.add('mdc-top-app-bar--fixed');
           this.mdcInit();
         }
 
-        if (name === 'short' && oldValue === null) {
+        if (this.type === 'short' && oldValue === null) {
           this.clearStyles();
           this.topAppBarElement.classList.add('mdc-top-app-bar--short');
           this.mdcInit();
         }
 
-        if (name === 'collapsed') {
+        if (this.type === 'collapsed') {
           this.clearStyles();
           this.topAppBarElement.classList.add('mdc-top-app-bar--short');
           this.topAppBarElement.classList.add('mdc-top-app-bar--short-collapsed');
