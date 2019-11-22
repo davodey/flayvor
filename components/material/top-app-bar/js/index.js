@@ -131,6 +131,10 @@
         if (slots[1].name === 'right') {
           const button = this.querySelector('button'),
             target = this.shadowRoot.querySelector('.mdc-top-app-bar__section--align-end');
+          button.classList.add('material-icons');
+          button.classList.add('mdc-icon-button');
+          button.classList.add('mdc-top-app-bar__action-item')
+          // button.classList.add('mdc-icon-button material-icons mdc-top-app-bar__action-item mdc-ripple-upgraded--unbounded mdc-ripple-upgraded');
           if (target !== null && button !== null) {
             target.appendChild(button)
           }

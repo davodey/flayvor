@@ -5,7 +5,7 @@
   "url": "http://www.davidodey.com",
   "twitter": "@davodey",
   "license": "ISC",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Material design app bar top - built as a web component",
   "main": "./js/dist/index.js",
   "scripts": {
@@ -50,5 +50,7 @@
     "android > 3",
     "Firefox > 47"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "@material/button": "^4.0.0"
+  }
 }
