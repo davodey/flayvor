@@ -70,20 +70,14 @@ export default [
   
   routes: [
 {
-  path: '/docs/doc1',
-  component: ComponentCreator('/docs/doc1'),
+  path: '/docs/installation/install',
+  component: ComponentCreator('/docs/installation/install'),
   exact: true,
   
 },
 {
-  path: '/docs/doc2',
-  component: ComponentCreator('/docs/doc2'),
-  exact: true,
-  
-},
-{
-  path: '/docs/doc3',
-  component: ComponentCreator('/docs/doc3'),
+  path: '/docs/material-components/top-app-bar',
+  component: ComponentCreator('/docs/material-components/top-app-bar'),
   exact: true,
   
 },

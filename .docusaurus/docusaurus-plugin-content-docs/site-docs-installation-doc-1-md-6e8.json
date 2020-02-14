@@ -1,0 +1,9 @@
+{
+  "id": "installation/install",
+  "title": "Install Flayvor Material Components",
+  "description": "You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).",
+  "source": "@site/docs/installation/doc1.md",
+  "permalink": "/docs/installation/install",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/installation/doc1.md",
+  "sidebar_label": "Install Flayvor"
+}

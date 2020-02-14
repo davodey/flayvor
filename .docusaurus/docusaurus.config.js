@@ -4,24 +4,19 @@ export default {
   "customFields": {},
   "themeConfig": {
     "navbar": {
-      "title": "My Site",
+      "title": "Flayvor.io",
       "logo": {
         "alt": "My Site Logo",
         "src": "img/logo.svg"
       },
       "links": [
         {
-          "to": "docs/doc1",
+          "to": "docs/material-components/top-app-bar",
           "label": "Docs",
-          "position": "left"
+          "position": "right"
         },
         {
-          "to": "blog",
-          "label": "Blog",
-          "position": "left"
-        },
-        {
-          "href": "https://github.com/facebook/docusaurus",
+          "href": "https://github.com/davodey/flayvor",
           "label": "GitHub",
           "position": "right"
         }
@@ -74,16 +69,16 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2020 My Project, Inc. Built with Docusaurus."
+      "copyright": "Copyright © 2020 Flayvor.io."
     }
   },
-  "title": "My Site",
-  "tagline": "The tagline of my site",
-  "url": "https://your-docusaurus-test-site.com",
+  "title": "Flayvor.io",
+  "tagline": "Flayvor Material Web Components",
+  "url": "https://flayvor.io",
   "baseUrl": "/",
   "favicon": "img/favicon.ico",
-  "organizationName": "facebook",
-  "projectName": "docusaurus",
+  "organizationName": "flayvor",
+  "projectName": "flayvor",
   "presets": [
     [
       "@docusaurus/preset-classic",
@@ -97,5 +92,15 @@ export default {
         }
       }
     ]
+  ],
+  "scripts": [
+    "https://cdn.polyfill.io/v2/polyfill.min.js?rum=0",
+    "https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/custom-elements-es5-adapter.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/moment-range/4.0.2/moment-range.js",
+    "https://buttons.github.io/buttons.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
+    "https://unpkg.com/@flayvor/top-app-bar"
   ]
 };

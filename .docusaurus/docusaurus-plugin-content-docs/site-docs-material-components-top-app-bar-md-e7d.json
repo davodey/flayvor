@@ -1,0 +1,14 @@
+{
+  "id": "material-components/top-app-bar",
+  "title": "Top App Bar",
+  "description": ">**Important Note**",
+  "source": "@site/docs/material-components/top-app-bar.md",
+  "permalink": "/docs/material-components/top-app-bar",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/material-components/top-app-bar.md",
+  "sidebar_label": "Top App Bar",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Flayvor Component Installation",
+    "permalink": "/docs/installation/install"
+  }
+}

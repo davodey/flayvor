@@ -1,0 +1,33 @@
+{
+  "name": "@flayvor/web-components",
+  "author": "David O'Dey | davodey@gmail.com",
+  "email": "davodey@gmail.com",
+  "url": "http://www.davidodey.com",
+  "twitter": "@davodey",
+  "license": "ISC",
+  "version": "1.1.0",
+  "description": "Material design app bar top - built as a web component",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd build && gulp",
+    "release": "node ./npm_scripts/release.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:davodey/flayvor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davodey/flayvor/issues"
+  },
+  "homepage": "https://github.com/davodey/flayvor#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "colors": "^1.3.3",
+    "dotenv": "^8.1.0",
+    "gulp": "^4.0.2",
+    "gulp-awspublish": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^1.4.0"
+  }
+}

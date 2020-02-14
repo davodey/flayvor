@@ -1,0 +1,14 @@
+{
+  "id": "installation/install",
+  "title": "Flayvor Component Installation",
+  "description": "The following options will give you access to the entire web component library.",
+  "source": "@site/docs/installation/install.md",
+  "permalink": "/docs/installation/install",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/installation/install.md",
+  "sidebar_label": "Install Flayvor Web Components",
+  "sidebar": "someSidebar",
+  "next": {
+    "title": "Top App Bar",
+    "permalink": "/docs/material-components/top-app-bar"
+  }
+}

@@ -1,0 +1,38 @@
+
+{
+  "name": "@flayvor/web-components",
+  "author": "David O'Dey | davodey@gmail.com",
+  "email": "davodey@gmail.com",
+  "url": "http://www.davidodey.com",
+  "twitter": "@davodey",
+  "license": "ISC",
+  "main": "web-components-min.js",
+  "version": "0.1.0",
+  "description": "Material design web components",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd build && gulp",
+    "release": "node ./npm_scripts/release.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:davodey/flayvor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davodey/flayvor/issues"
+  },
+  "homepage": "https://github.com/davodey/flayvor#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}

@@ -3,42 +3,30 @@
     "someSidebar": [
       {
         "type": "category",
-        "label": "Docusaurus",
+        "label": "Getting Started",
         "items": [
           {
             "type": "link",
-            "label": "Style Guide",
-            "href": "/docs/doc1"
-          },
-          {
-            "type": "link",
-            "label": "Document Number 2",
-            "href": "/docs/doc2"
-          },
-          {
-            "type": "link",
-            "label": "This is Document Number 3",
-            "href": "/docs/doc3"
+            "label": "Install Flayvor Web Components",
+            "href": "/docs/installation/install"
           }
         ]
       },
       {
         "type": "category",
-        "label": "Features",
+        "label": "Flayvor Material Components",
         "items": [
           {
             "type": "link",
-            "label": "Powered by MDX",
-            "href": "/docs/mdx"
+            "label": "Top App Bar",
+            "href": "/docs/material-components/top-app-bar"
           }
         ]
       }
     ]
   },
   "permalinkToSidebar": {
-    "/docs/doc1": "someSidebar",
-    "/docs/doc2": "someSidebar",
-    "/docs/doc3": "someSidebar",
-    "/docs/mdx": "someSidebar"
+    "/docs/installation/install": "someSidebar",
+    "/docs/material-components/top-app-bar": "someSidebar"
   }
 }

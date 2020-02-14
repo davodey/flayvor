@@ -1,0 +1,9 @@
+{
+  "id": "material-components/top-app-bar",
+  "title": "Top App Bar",
+  "description": "> **This is a material component**",
+  "source": "@site/docs/material-components/topappbar.md",
+  "permalink": "/docs/material-components/top-app-bar",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/material-components/topappbar.md",
+  "sidebar_label": "Top App Bar"
+}

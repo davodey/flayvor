@@ -1,23 +1,22 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Flayvor.io',
+  tagline: 'Flayvor Material Web Components',
+  url: 'https://flayvor.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'flayvor', // Usually your GitHub org/user name.
+  projectName: 'flayvor', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Flayvor.io',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       links: [
-        {to: 'docs/doc1', label: 'Docs', position: 'left'},
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'docs/material-components/top-app-bar', label: 'Docs', position: 'right'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/davodey/flayvor',
           label: 'GitHub',
           position: 'right',
         },
@@ -70,7 +69,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Flayvor.io.`,
     },
   },
   presets: [
@@ -88,4 +87,15 @@ module.exports = {
       },
     ],
   ],
+  scripts: [
+    // String format.
+    'https://cdn.polyfill.io/v2/polyfill.min.js?rum=0',
+    'https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/custom-elements-es5-adapter.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/moment-range/4.0.2/moment-range.js',
+    'https://buttons.github.io/buttons.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+    'https://unpkg.com/@flayvor/top-app-bar'
+  ]
 };
