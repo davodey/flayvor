@@ -70,8 +70,26 @@ export default [
   
   routes: [
 {
+  path: '/docs/installation/browser',
+  component: ComponentCreator('/docs/installation/browser'),
+  exact: true,
+  
+},
+{
+  path: '/docs/installation/cdn',
+  component: ComponentCreator('/docs/installation/cdn'),
+  exact: true,
+  
+},
+{
   path: '/docs/installation/install',
   component: ComponentCreator('/docs/installation/install'),
+  exact: true,
+  
+},
+{
+  path: '/docs/installation/usage',
+  component: ComponentCreator('/docs/installation/usage'),
   exact: true,
   
 },

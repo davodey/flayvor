@@ -1,0 +1,17 @@
+{
+  "id": "installation/browser",
+  "title": "Browser Support",
+  "description": "Flayvor web components support the latest, stable releases of all modern browsers and platforms.",
+  "source": "@site/docs/installation/browser.md",
+  "permalink": "/docs/installation/browser",
+  "sidebar_label": "Browser Support",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Usage",
+    "permalink": "/docs/installation/usage"
+  },
+  "next": {
+    "title": "CDN and NPM Links",
+    "permalink": "/docs/installation/cdn"
+  }
+}

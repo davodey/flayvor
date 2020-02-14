@@ -84,8 +84,7 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/uodeyda/Sites/projects/flayvor/sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/"
+          "sidebarPath": "/Users/uodeyda/Sites/projects/flayvor/sidebars.js"
         },
         "theme": {
           "customCss": "/Users/uodeyda/Sites/projects/flayvor/src/css/custom.css"

@@ -1,0 +1,17 @@
+{
+  "id": "installation/usage",
+  "title": "Usage",
+  "description": "Flayvor web components are custom HTML elements that can be consumed in any project, with any framework. To use a component simply add the HTML to your page like this:",
+  "source": "@site/docs/installation/usage.md",
+  "permalink": "/docs/installation/usage",
+  "sidebar_label": "Usage",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Flayvor Component Installation",
+    "permalink": "/docs/installation/install"
+  },
+  "next": {
+    "title": "Browser Support",
+    "permalink": "/docs/installation/browser"
+  }
+}

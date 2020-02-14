@@ -9,6 +9,21 @@
             "type": "link",
             "label": "Install Flayvor Web Components",
             "href": "/docs/installation/install"
+          },
+          {
+            "type": "link",
+            "label": "Usage",
+            "href": "/docs/installation/usage"
+          },
+          {
+            "type": "link",
+            "label": "Browser Support",
+            "href": "/docs/installation/browser"
+          },
+          {
+            "type": "link",
+            "label": "CDN and NPM Links",
+            "href": "/docs/installation/cdn"
           }
         ]
       },
@@ -26,7 +41,10 @@
     ]
   },
   "permalinkToSidebar": {
+    "/docs/installation/browser": "someSidebar",
+    "/docs/installation/cdn": "someSidebar",
     "/docs/installation/install": "someSidebar",
+    "/docs/installation/usage": "someSidebar",
     "/docs/material-components/top-app-bar": "someSidebar"
   }
 }

@@ -7,7 +7,7 @@
 
 module.exports = {
   someSidebar: {
-    'Getting Started': ['installation/install'],
+    'Getting Started': ['installation/install', 'installation/usage', 'installation/browser', 'installation/cdn'],
     'Flayvor Material Components': ['material-components/top-app-bar']
   }
 };

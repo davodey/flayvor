@@ -1,0 +1,17 @@
+{
+  "id": "installation/cdn",
+  "title": "CDN and NPM Links",
+  "description": "This is a list of all available components released on CDN and NPM.",
+  "source": "@site/docs/installation/cdn.md",
+  "permalink": "/docs/installation/cdn",
+  "sidebar_label": "CDN and NPM Links",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Browser Support",
+    "permalink": "/docs/installation/browser"
+  },
+  "next": {
+    "title": "Top App Bar",
+    "permalink": "/docs/material-components/top-app-bar"
+  }
+}
